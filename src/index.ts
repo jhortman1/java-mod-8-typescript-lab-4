@@ -3,14 +3,14 @@
   const input2 = document.getElementById("stringToPrepend") as HTMLInputElement;
 
     button!.addEventListener("click", function () {
-    console.log(prepend([input1!.value, input2!.value]));
+    console.log(prepend([input1!.value,input2!.value]));
     });
 
-function prepend<T>(tuple: Array<T>) : string {
+function prepend<T>(arr: T[]): string {
   let newString:string = "";
-  for(let i = 0; i<+tuple[0];i++)
+  for(let i = 0; i<+arr[0];i++)
   {
     newString+=" ";
   }
-  return newString+=tuple[1];
+  return newString+=arr[1];
 }
